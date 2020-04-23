@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    function fibonacci(value) {
+        let array = [1, 1];
+        for (let i = 2;; i++) {
+            array[i] = array[i - 2] + array[i - 1];
+            if (value < array[array.length - 1]) {
+                break;
+            }
+        }
+        return(array);
+    }
+
+    function isFibonacci(value) {
+        let array = fibonacci(value);
+        console.log(array);
+        let result;
+        for (let j = 0; j < array.length; j++) {
+            if (value === array[j]) {
+                result = "Thuộc dãy Fibonacci";
+                break;
+            }
+            else {
+                result = "Không thuộc dãy Fibonacci";
+            }
+        }
+        alert(result);
+    }
+
+    let input = parseInt(prompt("Nhập số cần kiển tra"));
+    let result = isFibonacci(input);
+
+</script>
+</body>
+</html>

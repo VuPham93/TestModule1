@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let array = [1, 3, 5, 12, 44, 23,  12, 43, 5, 68, 33];
+
+    function findMax(arr) {
+        let max = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i]
+            }
+        }
+        return max;
+    }
+
+    let result = findMax(array);
+    alert(result);
+
+</script>
+</body>
+</html>
