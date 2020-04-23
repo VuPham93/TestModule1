@@ -6,19 +6,28 @@
 </head>
 <body>
 <script>
-    let array = [1, 3, 5, 12, 44, 23,  12, 43, 5, 68, 33];
+    function creatArray() {
+        let array = [];
+        array.length = parseInt(prompt("Mời nhập chiều dài mảng"));
+        for (let i = 0; i < array.length; i++) {
+            array[i] = parseInt(prompt("Mời nhập phần tử thứ " + (i+1) + " của mảng"));
+        }
+        return array;
+    }
 
     function tryRemoveFromArray(arr, x) {
         for (let i = 0; i < arr.length; i++) {
             if (x === arr[i]) {
-                arr.splice(i,1)
+                alert("Số cần tìm có trong mảng");
+                arr.splice(i,1);
             }
         }
         return arr;
     }
 
-    let x = 12;
-    result = tryRemoveFromArray(array, x);
+    let array = creatArray();
+    let input = parseInt(prompt("Mời nhập số cần tìm"));
+    result = tryRemoveFromArray(array, input);
     alert(result);
 
 </script>
